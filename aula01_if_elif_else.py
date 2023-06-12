@@ -11,10 +11,10 @@ print(media)
 if media >= 9:
     print(f'Você está aprovado com a media de {media} e mensão SS')
     
-elif media > 7 and media < 9 :
+elif media >= 7 and media < 9 :
     print(f'Você está aprovado com a media de {media} e mensão MS')
 
-elif media > 5 and media < 7 :
+elif media >= 5 and media < 7 :
     print(f'Você está aprovado com a media de {media} e mensão MM')
     
 else:
