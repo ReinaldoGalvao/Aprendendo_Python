@@ -12,3 +12,9 @@ elif n2 > n1 and n2 > n3:
 
 else:
     print(f"O numero {n3} é o maior!")
+    
+'''
+Pederia ter usado +1 elif e nao ter colocado o else
+elif n3 > n1 and n3 > n2:
+    print(f"O numero {n2} é o maior!")
+'''
