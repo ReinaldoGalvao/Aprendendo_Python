@@ -10,7 +10,7 @@ while True:
         continue
     else:
         print('acertou, mizeravi')
-        """break"""
+        break
 
     
     
