@@ -8,8 +8,6 @@ velocidade = int(input('Diga qual a velocidade da sua internet em Mbps: '))
 
 taxa_dow = velocidade * 0.119209
 minuto_mbs = taxa_dow * 60
-hora_mbs = minuto_mbs * 60
 temp_dow = tamanho / minuto_mbs
 
 print('O download ira demorar {:.2f} minutos'.format(temp_dow))
-print(minuto_mbs)
