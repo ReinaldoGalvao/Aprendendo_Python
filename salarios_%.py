@@ -20,7 +20,6 @@ def salario_atu(salario):
     else:
         porcento = 5
         
-        
     aumento = (porcento / 100) * salario
     novo_salario = salario + aumento
         
