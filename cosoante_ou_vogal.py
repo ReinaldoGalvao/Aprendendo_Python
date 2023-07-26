@@ -4,7 +4,7 @@ Faça um Programa que verifique se uma letra digitada é vogal ou consoante.
 
 while True:
     letra = input('Diga uma letra: ').lower()
-    if letra.isdigit():
+    if letra.isdigit:
         print('Não pode ser um número. Digite apenas letras.')
         continue
     if len(letra) != 1:
