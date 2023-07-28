@@ -16,9 +16,6 @@ qual o time de cada estado com mais torcida.
      ╚═╝       ╚═╝   ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝
                                                    
 
-
-
-
 '''
 from time import sleep
 
