@@ -6,12 +6,27 @@ No final do programa, mostre:
 a quantida de torcedores de cada estado, 
 qual o time de cada estado com mais torcida.
 '''
+'''
+
+██╗  ██╗    ████████╗██╗███╗   ███╗███████╗███████╗
+██║  ██║    ╚══██╔══╝██║████╗ ████║██╔════╝██╔════╝
+███████║       ██║   ██║██╔████╔██║█████╗  ███████╗
+╚════██║       ██║   ██║██║╚██╔╝██║██╔══╝  ╚════██║
+     ██║       ██║   ██║██║ ╚═╝ ██║███████╗███████║
+     ╚═╝       ╚═╝   ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝
+                                                   
+
+
+
+
+'''
+from time import sleep
 
 time = ''
 time_rj = ''
 time_sp = ''
 total_torcidas = 0
-total_torcidas_anterior = 0
+
 torcidas_rj = 0
 torcidas_sp = 0
 soma_torcidas_rj = 0
@@ -19,11 +34,15 @@ soma_torcidas_sp = 0
 soma_torcidas = 0
 numero_torcida_rj = 0
 numero_torcida_sp = 0
-numero_maior_torcida = 0
 nome_maior_rj = ''
 nome_menor_sp = ''
 numero_menor_rj = 0
 numero_menor_sp = 0
+#####
+#tocida maior
+numero_anterior_torcida = 0
+numero_maior_torcida = 0
+total_torcidas_anterior = 0
 nome_maior_torcida = ''
 
 
@@ -57,6 +76,10 @@ for i in range(1, 5):
     if time == 'FLAMENGO' or time == 'VASCO':
         total_torcidas = int(qts_torcidas_str)
         total_torcidas_anterior = int(qts_torcidas_str)
+        if total_torcidas > numero_anterior_torcida:
+            numero_anterior_torcida = total_torcidas_anterior
+            numero_maior_torcida = total_torcidas
+            nome_maior_torcida = time
         soma_torcidas += total_torcidas
         soma_torcidas_rj += total_torcidas
         
@@ -72,16 +95,23 @@ for i in range(1, 5):
         if numero_menor_rj == 0:
             numero_menor_rj = total_torcidas
         
-        if total_torcidas > numero_menor_rj:
-            numero_torcida_rj = total_torcidas
-            nome_maior_rj = time_rj
+
             
-        if numero_maior_torcida > total_torcidas:
+        if numero_maior_torcida < total_torcidas:
             numero_maior_torcida = total_torcidas
             nome_maior_torcida = time_rj
-        
+
+#        if total_torcidas > numero_menor_rj:
+#            numero_torcida_rj = total_torcidas
+#            nome_maior_rj = time_rj
+
     else:
         total_torcidas = int(qts_torcidas_str)
+        total_torcidas_anterior = int(qts_torcidas_str)
+        if total_torcidas > numero_anterior_torcida:
+            numero_anterior_torcida = total_torcidas_anterior
+            numero_maior_torcida = total_torcidas
+            nome_maior_torcida = time
         soma_torcidas += total_torcidas
         soma_torcidas_sp += total_torcidas
 
@@ -104,34 +134,53 @@ for i in range(1, 5):
             numero_torcida_sp = total_torcidas
             nome_menor_sp = time_sp
 
-        if numero_maior_torcida > total_torcidas:
+        if numero_maior_torcida < total_torcidas:
             numero_maior_torcida = total_torcidas
             nome_maior_torcida = time_sp
             
-        if numero_maior_torcida > total_torcidas:
+
+'''        if numero_maior_torcida > total_torcidas:
             numero_maior_torcida = total_torcidas
             nome_maior_torcida = time_sp
-            
+'''            
+
 media = soma_torcidas / 4
 media_estado_rj = soma_torcidas_rj / 2
 media_estado_sp = soma_torcidas_sp / 2
-
+sleep(1)
 print('============================================================') 
+sleep(1)
+print('============================================================')
+sleep(1)
 print('============================================================') 
-print('============================================================') 
+sleep(1)
 print('Temos {} times do estado do Rio de Janeiro.'.format(torcidas_rj))
+sleep(1)
 print('O estado do Rio de Janeiro tem {} torcedores.'.format(soma_torcidas_rj))
-print('A média de torcidas no estados do Rio de janeiro é {}'.format(media_estado_rj))
+sleep(1)
+print('A média de torcidas no estados do Rio de janeiro é {:.0f}'.format(media_estado_rj))
+sleep(1)
 print('O maior time do estado do Rio de Janeiro é o {}.'.format(nome_maior_rj))
+sleep(1)
 print('============================================================') 
+sleep(1)
 print('============================================================') 
+sleep(1)
 print('Temos {} times do estado do São Paulo.'.format(torcidas_sp))
+sleep(1)
 print('O estado de São Paulo tem {} torcedores'.format(soma_torcidas_sp))
-print('A média de torcidas no estados do São Paulo é {}'.format(media_estado_sp))
+sleep(1)
+print('A média de torcidas no estados do São Paulo é {:.0f}'.format(media_estado_sp))
+sleep(1)
 print('O menor time do estado de São Paulo é o {}.'.format(nome_menor_sp))
+sleep(1)
 print('============================================================') 
+sleep(1)
 print('============================================================') 
+sleep(1)
 print('A soma de todas as torcidas é {}'.format(soma_torcidas))
-print('A média de torcidas por times é {}'.format(media))
+sleep(1)
+print('A média de torcidas por times é {:.0f}'.format(media))
+sleep(1)
 print('A maior torcida é o {} com {} torcedores.'.format(nome_maior_torcida, numero_maior_torcida))
 
