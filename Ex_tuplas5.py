@@ -27,12 +27,13 @@ impar = []
 npar = 0
 nimpar = 0
 for i in numeros:
-    if i % 2 != 0:
+    if i % 2 == 0:
+        par.append(i)
+        npar +=1
+    else:
         impar.append(i)
         nimpar +=1
-    else:
-        par.append(i)
         
-print(f'Os números digitados foram {numeros}')
+print(f'Os números digitados foram {" ".join(map(str, numeros))}')
 print(f'Os números pares digitados são: {" ".join(map(str, par))}')
 print(f'Os números ímpares digitados são: {" ".join(map(str, impar))}')
