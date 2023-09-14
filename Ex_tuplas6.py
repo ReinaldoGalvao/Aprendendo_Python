@@ -1,7 +1,7 @@
 medias = []
 
 for _ in range(10):
-    notas = [int(input(f'Diga a {i + 1}ª nota do {i + 1}º aluno: ')) for i in range(4)]
+    notas = [int(input(f'Diga a {i + 1}ª nota do aluno: ')) for i in range(4)]
     media = sum(notas) / 4
     medias.append(media)
 
