@@ -1,19 +1,9 @@
-def fatorial(n):
-    f = 1
-    for c in range(1, n+1):
-        f*=c
-    return f
-
-def dobro(n):
-    return n*2
-
-def triplo(n):
-    return n*3
+import uteis
 
 num = int(input('Digite um numero: '))
-fat = fatorial(num)
+fat = uteis.fatorial(num)
 print(f'O fatorial de {num} é {fat}')
-dob = dobro(num)
+dob = uteis.dobro(num)
 print(f'O dobro de {num} é {dob}')
-trip = triplo(num)
+trip = uteis.triplo(num)
 print(f'O triplo de {num} é {trip}')
