@@ -3,7 +3,7 @@ usuario = 'xipos'
 senha = '123456'
 
 while True:
-    usuarioLogin = input('Digite seu logi: ')
+    usuarioLogin = input('Digite seu login: ')
     usuarioSenha = input('Digite sua senha: ')
     
     if usuarioLogin == usuario and usuarioSenha == senha:
