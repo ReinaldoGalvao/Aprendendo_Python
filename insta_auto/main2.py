@@ -30,7 +30,14 @@ with sync_playwright() as p:
     page.wait_for_timeout(1557)
     page.click('xpath=/html/body/div[3]/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/button[2]')
     
+    #like na primeira publicação
+    page.wait_for_timeout(1547)
+    page.click('xpath=/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div[1]/div[1]/div/div[2]/div/div[1]/div/article[1]/div/div[3]/div/div/div[1]/div[1]/span[1]/div/div')
+
     
+
+
+
     
     page.wait_for_timeout(2000)
     page.wait_for_timeout(2000000)
